@@ -1,24 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dz_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clB-Vx-ByG">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DrY-i7-N0G">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-6B-2dA">
+                                                <rect key="frame" x="8" y="79" width="377" height="719"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Rmm-cq-4gE"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="bOL-lj-Vat"/>
+                                                    <constraint firstAttribute="height" constant="200" id="d9i-nt-rbB"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="20" left="8" bottom="20" right="8"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wy0-6B-2dA" firstAttribute="leading" secondItem="DrY-i7-N0G" secondAttribute="leading" id="Mxd-bc-2Xc"/>
+                                            <constraint firstAttribute="trailing" secondItem="wy0-6B-2dA" secondAttribute="trailing" id="cJv-8g-dMm"/>
+                                            <constraint firstItem="wy0-6B-2dA" firstAttribute="top" secondItem="DrY-i7-N0G" secondAttribute="top" id="i8Z-GY-UA6"/>
+                                            <constraint firstAttribute="bottom" secondItem="wy0-6B-2dA" secondAttribute="bottom" id="s5f-XV-7Bn"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="8" bottom="20" right="8"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-0u-XZG">
+                                        <rect key="frame" x="80" y="775" width="234" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Подробнее про Казахстан"/>
+                                        <connections>
+                                            <segue destination="iEh-rh-RfG" kind="show" id="E78-D9-cHx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtd-4r-CSI">
+                                        <rect key="frame" x="89" y="705" width="215" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Подробнее про Алматы"/>
+                                        <connections>
+                                            <segue destination="DSb-0P-jN0" kind="show" id="d3V-t2-rEJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-MG-cXi">
+                                        <rect key="frame" x="8" y="557" width="377" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Меня зовут Гафур, мне 14 лет, живу в городе Алматы в республике Казахстан, увлекаюсь программированием, шахматами, путешествиями, экономикой и политикой</string>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tUW-xU-GYg" firstAttribute="bottom" secondItem="DrY-i7-N0G" secondAttribute="bottom" id="0ga-2H-72z"/>
+                                    <constraint firstItem="DrY-i7-N0G" firstAttribute="top" secondItem="tUW-xU-GYg" secondAttribute="top" id="FOw-ZI-m6u"/>
+                                    <constraint firstItem="DrY-i7-N0G" firstAttribute="leading" secondItem="tUW-xU-GYg" secondAttribute="leading" id="O3O-RN-Wbr"/>
+                                    <constraint firstItem="tUW-xU-GYg" firstAttribute="trailing" secondItem="DrY-i7-N0G" secondAttribute="trailing" id="PRz-dF-wls"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="SQn-2R-xNh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tUW-xU-GYg"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="clB-Vx-ByG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XT3-hF-ZBq"/>
+                            <constraint firstAttribute="bottom" secondItem="clB-Vx-ByG" secondAttribute="bottom" id="Zxk-l9-Pdj"/>
+                            <constraint firstItem="clB-Vx-ByG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n9m-kE-9xR"/>
+                            <constraint firstItem="clB-Vx-ByG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nSB-Od-V17"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZTd-GZ-Ip1">
+            <objects>
+                <viewController id="DSb-0P-jN0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SQR-q2-dex">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На 1 мая 2023 население Алматы составляло 2179,6 тыс. человек" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W2-E8-Bu7">
+                                <rect key="frame" x="16" y="221" width="361" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Площадь Алматы 682 км²" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kl-Mt-YZG">
+                                <rect key="frame" x="16" y="346" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Алматы был основан в 1854 году, хотя ранее на месте современного Алматы уже находились различные поселения" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-Ny-IyR">
+                                <rect key="frame" x="16" y="422" width="361" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qyb-lJ-LA6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oqY-kd-5AA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kmm-gd-KLW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977.86259541984725" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c2m-Xj-Nfe">
+            <objects>
+                <viewController id="iEh-rh-RfG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="30H-xC-Okf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На 1 мая 2023 года население Казахстана составляло 19 миллионов 854 тысячи человек" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q53-ln-btK">
+                                <rect key="frame" x="16" y="221" width="361" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Площадь Казахстана составляет 2 725 000 км²" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-5Y-3Kg">
+                                <rect key="frame" x="16" y="347" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Столица Казахстана город Астана" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ3-Gb-y1E">
+                                <rect key="frame" x="16" y="414" width="274" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eaR-73-eaN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KPz-ha-PLz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyk-Xw-LU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854.1984732824426" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="598.66668701171875" height="393.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
